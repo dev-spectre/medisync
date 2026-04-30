@@ -256,13 +256,34 @@
       left: 0;
     }
 
-    /* ── FOUNDER SECTION ── */
+    /* ── FOUNDER/TEAM SECTION ── */
+    .team-header {
+      text-align: center;
+      padding: 60px 5% 0;
+      background: var(--white);
+    }
+
+    .team-header h2 {
+      font-size: 36px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
     .founder {
-      padding: 80px 5%;
+      padding: 60px 5%;
       background: var(--white);
       display: flex;
       align-items: center;
       gap: 60px;
+    }
+
+    .bg-light-alt {
+      background: var(--bg-light);
+    }
+
+    .flex-reverse {
+      flex-direction: row-reverse;
+      text-align: right;
     }
 
     .founder-img {
@@ -295,29 +316,16 @@
       margin-bottom: 20px;
     }
 
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .skill-tag {
-      background: var(--bg-light);
-      border: 1px solid #E2E8F0;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    /* ── FOUNDER CONTACT PILLS ── */
+    /* ── CONTACT PILLS ── */
     .contact-actions {
       display: flex;
       gap: 15px;
       margin-top: 30px;
       flex-wrap: wrap;
+    }
+
+    .flex-reverse .contact-actions {
+      justify-content: flex-end;
     }
 
     .contact-btn {
@@ -491,23 +499,6 @@
       object-fit: cover;
     }
 
-    .ui-image.mobile-img {
-      object-fit: contain;
-      width: 50%;
-      object-position: center;
-    }
-
-    .mockup-placeholder {
-      background: rgba(255, 255, 255, 0.1);
-      height: 300px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      border: 2px dashed rgba(255, 255, 255, 0.2);
-    }
-
     .impact {
       padding: 80px 5%;
       background: var(--primary);
@@ -536,6 +527,11 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    .founder-img.prasanna-img,
+    .founder-img.mathan-img {
+      object-position: top;
+    }
+
     @media (max-width: 768px) {
 
       .hero,
@@ -547,12 +543,12 @@
         grid-template-columns: 1fr;
       }
 
-      .founder {
+      .founder, .founder.flex-reverse {
         flex-direction: column;
         text-align: center;
       }
 
-      .contact-actions {
+      .contact-actions, .flex-reverse .contact-actions {
         justify-content: center;
       }
 
@@ -604,6 +600,12 @@
       </div>
     </section>
 
+    <!-- LEADERSHIP TEAM SECTION -->
+    <div class="team-header">
+      <h2>Meet the Team</h2>
+    </div>
+
+    <!-- Vaishnavi M - Founder -->
     <section class="founder">
       <img src="assets/vaishu.jpeg" alt="Vaishnavi M" class="founder-img">
       <div class="founder-content">
@@ -619,7 +621,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg>
-            vaishnavi130478@gmail.com
+            Email Vaishnavi
           </a>
           <a href="https://www.linkedin.com/in/vaishnavi-m-752789321" target="_blank"
             class="contact-btn contact-linkedin">
@@ -628,10 +630,72 @@
               <rect x="2" y="9" width="4" height="12" />
               <circle cx="4" cy="4" r="2" />
             </svg>
-            Connect on LinkedIn
+            LinkedIn
           </a>
         </div>
+      </div>
+    </section>
 
+    <!-- Gokul R J - CEO -->
+    <section class="founder">
+      <img src="assets/gokul.jpeg" alt="Gokul R J" class="founder-img">
+      <div class="founder-content">
+        <h2>Gokul R J</h2>
+        <div class="founder-role">Chief Executive Officer</div>
+        <p class="founder-bio">3rd-year Computer Science Engineering student at Adithya. As CEO, Gokul leads MediSync’s strategic direction, builds high-impact partnerships, and guides the team to deliver dependable healthcare intelligence solutions.</p>
+
+        <div class="contact-actions">
+          <a href="#" target="_blank" class="contact-btn contact-linkedin">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mathan S - CFO -->
+    <section class="founder">
+      <img src="assets/mathan.jpeg" alt="Mathan S" class="founder-img mathan-img">
+      <div class="founder-content">
+        <h2>Mathan S</h2>
+        <div class="founder-role">Chief Financial Officer</div>
+        <p class="founder-bio">3rd-year Computer Science Engineering student at Adithya. Mathan manages MediSync’s financial strategy, ensures efficient resource allocation, and helps the team scale sustainably for long-term healthcare impact.</p>
+
+        <div class="contact-actions">
+          <a href="#" target="_blank" class="contact-btn contact-linkedin">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- B.PRASANNA - Co Founder -->
+    <section class="founder">
+      <img src="assets/prasna.jpeg" alt="B.PRASANNA" class="founder-img prasanna-img">
+      <div class="founder-content">
+        <h2>Prasanna B</h2>
+        <div class="founder-role">Co-Founder</div>
+        <p class="founder-bio">3rd-year Computer Science Engineering student at Adithya. As Co-founder, Prasanna shapes MediSync’s product delivery and technical architecture, ensuring the platform remains robust, responsive, and built for real healthcare challenges.</p>
+
+        <div class="contact-actions">
+          <a href="#" target="_blank" class="contact-btn contact-linkedin">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
       </div>
     </section>
 
@@ -649,7 +713,7 @@
     </section>
 
     <footer>
-      <p>© 2026 MediSync. Founded by Vaishnavi M. All rights reserved.</p>
+      <p>© 2026 MediSync. All rights reserved.</p>
     </footer>
   </div>
 
@@ -657,9 +721,9 @@
 
     <nav>
       <a href="#" class="logo" onclick="switchPage('page1')">
-        <div class="logo-icon"><svg viewBox="0 0 24 24">
-            <path d="M3 12h4l3-8 4 16 3-8 4 0" />
-          </svg></div>
+        <div class="logo-icon">
+          <img src="assets/logo.jpeg" alt="MediSync logo" />
+        </div>
         Medi<span>Sync</span>
       </a>
       <button class="btn btn-outline" onclick="switchPage('page1')">← Back to Overview</button>
@@ -738,12 +802,6 @@
         <div class="ui-image">
           <img src="assets/ds3.jpeg" alt="" srcset="">
         </div>
-        <!-- <div class="ui-image">
-          <img src="assets/ds4.jpeg" alt="" srcset="">
-        </div>
-        <div class="ui-image mobile-img">
-          <img src="assets/dsm.jpeg" alt="" srcset="">
-        </div> -->
       </div>
     </section>
 
@@ -775,7 +833,7 @@
       <h2 style="margin-bottom: 20px;">Ready to Transform Rural Healthcare?</h2>
       <p style="margin-bottom: 30px;">For partnership inquiries, implementation details, or investment discussions.</p>
       <a href="mailto:vaishnavi130478@gmail.com" class="btn btn-primary"
-        style="font-size: 18px; padding: 15px 30px;">Contact Vaishnavi M</a>
+        style="font-size: 18px; padding: 15px 30px;">Contact Team</a>
     </section>
 
     <footer>
