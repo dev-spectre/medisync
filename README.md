@@ -35,6 +35,10 @@ Open `index.html` in a browser. No build step required.
     └── [team photos].jpeg
 ```
 
+
+## Screenshots
+
+![screenshot](screenshots/home.png)
 ## License
 
 MIT
